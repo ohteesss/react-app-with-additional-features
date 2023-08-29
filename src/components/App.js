@@ -15,6 +15,7 @@ import AdditionalStartScreen from "./AdditionalStartScreenFeatures.js";
 const SECS_PER_QUESTION = 10;
 const initialState = {
   questions: [],
+  diffQuestions: [],
 
   // 'loading' , 'error', ready', 'active',finished
   status: "loading",
@@ -24,7 +25,7 @@ const initialState = {
   highScore: 0,
   secondsRemaining: null,
   maxQuestions: 1,
-  difficulty: 1,
+  difficulty: 0,
   secs_per_question: 5,
 };
 function reducer(state, action) {
@@ -41,36 +42,41 @@ function reducer(state, action) {
       return { ...state, status: "error" };
     case "quizStarted":
       let diffQuestions;
+      const easyQuestion = state.questions.filter((q) => q.points === 10);
+      const mediumQuestion = state.questions.filter((q) => q.points === 20);
+      const hardQuestion = state.questions.filter((q) => q.points === 30);
+
       function settingQuestions() {
         switch (state.difficulty) {
           case 0:
-            return (diffQuestions = state.questions);
-          case 1:
-            return (diffQuestions = state.questions.filter(
-              (q) => q.points === 10
+            return (diffQuestions = state.questions.slice(
+              0,
+              state.maxQuestions
             ));
+          case 1:
+            return (diffQuestions = easyQuestion.slice(0, state.maxQuestions));
           case 2:
-            return (diffQuestions = state.questions.filter(
-              (q) => q.points === 20
+            return (diffQuestions = mediumQuestion.slice(
+              0,
+              state.maxQuestions
             ));
           case 3:
-            return (diffQuestions = state.questions.filter(
-              (q) => q.points === 30
-            ));
+            return (diffQuestions = hardQuestion.slice(0, state.maxQuestions));
 
           default:
             throw new Error("Something went wrong");
         }
       }
       settingQuestions();
+      console.log(state);
       return {
         ...state,
         status: "active",
-        secondsRemaining: state.questions.length * SECS_PER_QUESTION,
-        questions: diffQuestions,
+        diffQuestions: diffQuestions,
+        secondsRemaining: state.maxQuestions * state.secs_per_question,
       };
     case "questionAnswered":
-      const question = state.questions[state.index];
+      const question = state.diffQuestions[state.index];
       return {
         ...state,
         answer: action.payload,
@@ -82,14 +88,26 @@ function reducer(state, action) {
     case "nextQuestion":
       return { ...state, index: state.index + 1, answer: null };
     case "finished":
+      const savedHighscore = localStorage.getItem("highscore");
       return {
         ...state,
         status: "finished",
         highScore:
-          state.points > state.highScore ? state.points : state.highScore,
+          state.points > savedHighscore ? state.points : savedHighscore,
       };
     case "restarted":
-      return { ...initialState, status: "ready", questions: state.questions };
+      function highScoreSettings() {
+        !localStorage.getItem("highscore") &&
+          localStorage.setItem("highscore", state.highScore);
+        +localStorage.getItem("highscore") < state.highScore &&
+          localStorage.setItem("highscore", state.highScore);
+      }
+      highScoreSettings();
+      return {
+        ...initialState,
+        status: "initialSettings",
+        questions: state.questions,
+      };
     case "tick":
       return {
         ...state,
@@ -100,7 +118,7 @@ function reducer(state, action) {
       return {
         ...state,
         status: "ready",
-        maxQuestions: action.payload.numberQuests,
+        maxQuestions: action.payload.numberQuest,
         difficulty: action.payload.difficulty,
         secs_per_question: action.payload.secsPerQuest,
       };
@@ -120,11 +138,12 @@ export default function App() {
       highScore,
       secondsRemaining,
       maxQuestions,
+      diffQuestions,
     },
     dispatch,
   ] = useReducer(reducer, initialState);
-  const numQuestions = questions.length;
-  const totalPoints = questions
+  const numQuestions = diffQuestions.length;
+  const totalPoints = diffQuestions
     .map((el) => el.points)
     .reduce((acc, cur) => acc + cur, 0);
   useEffect(function () {
@@ -162,7 +181,7 @@ export default function App() {
             />
             <Question
               dispatch={dispatch}
-              question={questions[index]}
+              question={diffQuestions[index]}
               answer={answer}
             />
             <Timer dispatch={dispatch} secondsRemaining={secondsRemaining} />
