@@ -38,7 +38,6 @@ export default function App() {
             {answer !== null && <NextButton />}
           </Footer>
         )}
-        {/* {status === "finished" && <Finished />} */}
         {status === "finished" && <Finished />}
       </Main>
     </div>
