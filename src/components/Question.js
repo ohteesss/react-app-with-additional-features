@@ -1,18 +1,13 @@
-import { useEffect, useState } from "react";
 import Options from "./Options";
-function Question({ question, dispatch, answer }) {
+import { useQuiz } from "../context/QuizContext";
+function Question() {
   // console.log(question);
-  const { options, correctOption, points } = question;
+  const { index, diffQuestions } = useQuiz();
 
   return (
-    <div>
-      <h4>{question.question}</h4>
-      <Options
-        options={options}
-        dispatch={dispatch}
-        answer={answer}
-        correctOption={correctOption}
-      />
+    <div className="question-box">
+      <h4>{diffQuestions[index].question}</h4>
+      <Options />
       {/* {hasAnswered && (
         <button
           className="btn"

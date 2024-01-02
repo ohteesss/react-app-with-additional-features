@@ -5,15 +5,12 @@ import ReactDOM from "react-dom/client";
 
 import App from "./components/App";
 import "./index.css";
-import { QuizProvider } from "./context/QuizContext";
 
 // REACT 18
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <React.StrictMode>
-    <QuizProvider>
-      <App />
-    </QuizProvider>
+    <App />
   </React.StrictMode>
 );
 

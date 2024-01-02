@@ -1,7 +1,5 @@
 import { useState } from "react";
-import { useQuiz } from "../context/QuizContext";
-function AdditionalStartScreen() {
-  const { dispatch, questions } = useQuiz();
+function AdditionalStartScreen({ dispatch, questions }) {
   let maxQuestion;
   const [difficulty, setDifficulty] = useState(0);
   const [numberQuest, setNumberQuest] = useState(1);

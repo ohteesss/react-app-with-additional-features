@@ -1,9 +1,5 @@
-import { useQuiz } from "../context/QuizContext";
-
-function NextButton() {
-  const { index, diffQuestions, dispatch } = useQuiz();
-  const numQuestions = diffQuestions.length;
-  // const lastPage = index < numQuestions - 1;
+function NextButton({ index, numQuestions, dispatch }) {
+  const lastPage = index < numQuestions - 1;
   if (index < numQuestions - 1)
     return (
       <button
