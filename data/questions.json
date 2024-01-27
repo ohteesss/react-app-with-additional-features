@@ -1,139 +1,473 @@
 {
   "questions": [
     {
-      "question": "Which is the most popular JavaScript framework?",
-      "options": ["Angular", "React", "Svelte", "Vue"],
-      "correctOption": 1,
-      "points": 10
-    },
-    {
-      "question": "Which company invented React?",
-      "options": ["Google", "Apple", "Netflix", "Facebook"],
-      "correctOption": 3,
-      "points": 10
-    },
-    {
-      "question": "What's the fundamental building block of React apps?",
-      "options": ["Components", "Blocks", "Elements", "Effects"],
+      "question": "What is the chemical symbol for gold?",
+      "options": ["Au", "Ag", "Fe", "Cu"],
       "correctOption": 0,
       "points": 10
     },
     {
-      "question": "What's the name of the syntax we use to describe the UI in React components?",
-      "options": ["FBJ", "Babel", "JSX", "ES2015"],
+      "question": "Who developed the theory of relativity?",
+      "options": [
+        "Isaac Newton",
+        "Albert Einstein",
+        "Galileo Galilei",
+        "Niels Bohr"
+      ],
+      "correctOption": 1,
+      "points": 10
+    },
+    {
+      "question": "In what year did the Apollo 11 mission successfully land humans on the moon?",
+      "options": ["1965", "1969", "1975", "1980"],
+      "correctOption": 1,
+      "points": 10
+    },
+    {
+      "question": "What is the largest planet in our solar system?",
+      "options": ["Earth", "Jupiter", "Saturn", "Mars"],
+      "correctOption": 1,
+      "points": 10
+    },
+    {
+      "question": "Who wrote the play 'Romeo and Juliet'?",
+      "options": [
+        "William Shakespeare",
+        "Jane Austen",
+        "Charles Dickens",
+        "Mark Twain"
+      ],
+      "correctOption": 0,
+      "points": 10
+    },
+    {
+      "question": "What is the capital city of France?",
+      "options": ["Berlin", "Madrid", "Rome", "Paris"],
+      "correctOption": 3,
+      "points": 10
+    },
+    {
+      "question": "Which planet is known as the 'Red Planet'?",
+      "options": ["Venus", "Mars", "Jupiter", "Saturn"],
+      "correctOption": 1,
+      "points": 10
+    },
+    {
+      "question": "Who discovered penicillin?",
+      "options": [
+        "Marie Curie",
+        "Alexander Fleming",
+        "Louis Pasteur",
+        "Robert Koch"
+      ],
+      "correctOption": 1,
+      "points": 20
+    },
+    {
+      "question": "What is the capital of Japan?",
+      "options": ["Beijing", "Seoul", "Tokyo", "Bangkok"],
       "correctOption": 2,
-      "points": 10
+      "points": 20
     },
     {
-      "question": "How does data flow naturally in React apps?",
-      "options": [
-        "From parents to children",
-        "From children to parents",
-        "Both ways",
-        "The developers decides"
-      ],
-      "correctOption": 0,
-      "points": 10
-    },
-    {
-      "question": "How to pass data into a child component?",
-      "options": ["State", "Props", "PropTypes", "Parameters"],
+      "question": "What is the chemical formula for water?",
+      "options": ["CO2", "H2O", "O2", "CH4"],
       "correctOption": 1,
-      "points": 10
+      "points": 20
     },
     {
-      "question": "When to use derived state?",
+      "question": "Who wrote 'To Kill a Mockingbird'?",
       "options": [
-        "Whenever the state should not trigger a re-render",
-        "Whenever the state can be synchronized with an effect",
-        "Whenever the state should be accessible to all components",
-        "Whenever the state can be computed from another state variable"
-      ],
-      "correctOption": 3,
-      "points": 30
-    },
-    {
-      "question": "What triggers a UI re-render in React?",
-      "options": [
-        "Running an effect",
-        "Passing props",
-        "Updating state",
-        "Adding event listeners to DOM elements"
+        "J.K. Rowling",
+        "George Orwell",
+        "Harper Lee",
+        "Ernest Hemingway"
       ],
       "correctOption": 2,
       "points": 20
     },
     {
-      "question": "When do we directly \"touch\" the DOM in React?",
-      "options": [
-        "When we need to listen to an event",
-        "When we need to change the UI",
-        "When we need to add styles",
-        "Almost never"
-      ],
-      "correctOption": 3,
+      "question": "What is the largest mammal on Earth?",
+      "options": ["Elephant", "Giraffe", "Blue Whale", "Hippopotamus"],
+      "correctOption": 2,
       "points": 20
     },
     {
-      "question": "In what situation do we use a callback to update state?",
-      "options": [
-        "When updating the state will be slow",
-        "When the updated state is very data-intensive",
-        "When the state update should happen faster",
-        "When the new state depends on the previous state"
-      ],
-      "correctOption": 3,
+      "question": "Who is known as the 'Father of Computers'?",
+      "options": ["Alan Turing", "Charles Babbage", "Bill Gates", "Steve Jobs"],
+      "correctOption": 1,
       "points": 30
     },
     {
-      "question": "If we pass a function to useState, when will that function be called?",
-      "options": [
-        "On each re-render",
-        "Each time we update the state",
-        "Only on the initial render",
-        "The first time we update the state"
-      ],
+      "question": "In what year did the Titanic sink?",
+      "options": ["1912", "1920", "1935", "1941"],
+      "correctOption": 0,
+      "points": 30
+    },
+    {
+      "question": "What is the capital of Australia?",
+      "options": ["Sydney", "Melbourne", "Canberra", "Perth"],
       "correctOption": 2,
       "points": 30
     },
     {
-      "question": "Which hook to use for an API request on the component's initial render?",
-      "options": ["useState", "useEffect", "useRef", "useReducer"],
+      "question": "Who wrote the play 'Romeo and Juliet'?",
+      "options": [
+        "William Shakespeare",
+        "Jane Austen",
+        "Charles Dickens",
+        "Mark Twain"
+      ],
+      "correctOption": 0,
+      "points": 10
+    },
+    {
+      "question": "What is the capital city of France?",
+      "options": ["Berlin", "Madrid", "Rome", "Paris"],
+      "correctOption": 3,
+      "points": 10
+    },
+    {
+      "question": "Which planet is known as the 'Red Planet'?",
+      "options": ["Venus", "Mars", "Jupiter", "Saturn"],
       "correctOption": 1,
       "points": 10
     },
     {
-      "question": "Which variables should go into the useEffect dependency array?",
+      "question": "Who discovered penicillin?",
       "options": [
-        "Usually none",
-        "All our state variables",
-        "All state and props referenced in the effect",
-        "All variables needed for clean up"
+        "Marie Curie",
+        "Alexander Fleming",
+        "Louis Pasteur",
+        "Robert Koch"
       ],
+      "correctOption": 1,
+      "points": 20
+    },
+    {
+      "question": "What is the capital of Japan?",
+      "options": ["Beijing", "Seoul", "Tokyo", "Bangkok"],
+      "correctOption": 2,
+      "points": 20
+    },
+    {
+      "question": "What is the chemical formula for water?",
+      "options": ["CO2", "H2O", "O2", "CH4"],
+      "correctOption": 1,
+      "points": 20
+    },
+    {
+      "question": "Who wrote 'To Kill a Mockingbird'?",
+      "options": [
+        "J.K. Rowling",
+        "George Orwell",
+        "Harper Lee",
+        "Ernest Hemingway"
+      ],
+      "correctOption": 2,
+      "points": 20
+    },
+    {
+      "question": "What is the largest mammal on Earth?",
+      "options": ["Elephant", "Giraffe", "Blue Whale", "Hippopotamus"],
+      "correctOption": 2,
+      "points": 20
+    },
+    {
+      "question": "Who is known as the 'Father of Computers'?",
+      "options": ["Alan Turing", "Charles Babbage", "Bill Gates", "Steve Jobs"],
+      "correctOption": 1,
+      "points": 30
+    },
+    {
+      "question": "In what year did the Titanic sink?",
+      "options": ["1912", "1920", "1935", "1941"],
+      "correctOption": 0,
+      "points": 30
+    },
+    {
+      "question": "What is the capital of Australia?",
+      "options": ["Sydney", "Melbourne", "Canberra", "Perth"],
       "correctOption": 2,
       "points": 30
     },
     {
-      "question": "An effect will always run on the initial render.",
+      "question": "Who formulated the theory of evolution?",
       "options": [
-        "True",
-        "It depends on the dependency array",
-        "False",
-        "In depends on the code in the effect"
+        "Isaac Newton",
+        "Charles Darwin",
+        "Gregor Mendel",
+        "Louis Pasteur"
+      ],
+      "correctOption": 1,
+      "points": 10
+    },
+    {
+      "question": "What gas do plants absorb during photosynthesis?",
+      "options": ["Oxygen", "Carbon Dioxide", "Nitrogen", "Hydrogen"],
+      "correctOption": 1,
+      "points": 10
+    },
+    {
+      "question": "Which planet is known as the 'Morning Star' or 'Evening Star'?",
+      "options": ["Venus", "Mars", "Jupiter", "Saturn"],
+      "correctOption": 0,
+      "points": 10
+    },
+    {
+      "question": "Who is the author of '1984'?",
+      "options": [
+        "George Orwell",
+        "Aldous Huxley",
+        "Ray Bradbury",
+        "J.K. Rowling"
+      ],
+      "correctOption": 0,
+      "points": 10
+    },
+    {
+      "question": "What is the capital of Canada?",
+      "options": ["Toronto", "Vancouver", "Ottawa", "Montreal"],
+      "correctOption": 2,
+      "points": 10
+    },
+    {
+      "question": "Which element has the chemical symbol 'O'?",
+      "options": ["Osmium", "Oxygen", "Gold", "Iron"],
+      "correctOption": 1,
+      "points": 10
+    },
+    {
+      "question": "Who painted the 'Mona Lisa'?",
+      "options": [
+        "Vincent van Gogh",
+        "Pablo Picasso",
+        "Leonardo da Vinci",
+        "Claude Monet"
+      ],
+      "correctOption": 2,
+      "points": 20
+    },
+    {
+      "question": "What is the powerhouse of the cell?",
+      "options": [
+        "Mitochondria",
+        "Nucleus",
+        "Endoplasmic Reticulum",
+        "Golgi Apparatus"
+      ],
+      "correctOption": 0,
+      "points": 20
+    },
+    {
+      "question": "Who is the author of 'Pride and Prejudice'?",
+      "options": [
+        "Jane Austen",
+        "Emily Brontë",
+        "Charles Dickens",
+        "Charlotte Brontë"
+      ],
+      "correctOption": 0,
+      "points": 20
+    },
+    {
+      "question": "What is the capital of Brazil?",
+      "options": ["Sao Paulo", "Rio de Janeiro", "Brasilia", "Salvador"],
+      "correctOption": 2,
+      "points": 20
+    },
+    {
+      "question": "What is the freezing point of water in Celsius?",
+      "options": ["0°C", "-10°C", "10°C", "100°C"],
+      "correctOption": 0,
+      "points": 30
+    },
+    {
+      "question": "What is the capital of India?",
+      "options": ["Mumbai", "Delhi", "Bangalore", "Kolkata"],
+      "correctOption": 1,
+      "points": 10
+    },
+    {
+      "question": "Which gas is responsible for the greenhouse effect on Earth?",
+      "options": ["Oxygen", "Carbon Dioxide", "Methane", "Nitrous Oxide"],
+      "correctOption": 1,
+      "points": 10
+    },
+    {
+      "question": "Who wrote 'The Great Gatsby'?",
+      "options": [
+        "F. Scott Fitzgerald",
+        "Ernest Hemingway",
+        "J.D. Salinger",
+        "Harper Lee"
+      ],
+      "correctOption": 0,
+      "points": 10
+    },
+    {
+      "question": "What is the largest ocean on Earth?",
+      "options": [
+        "Atlantic Ocean",
+        "Indian Ocean",
+        "Southern Ocean",
+        "Pacific Ocean"
+      ],
+      "correctOption": 3,
+      "points": 10
+    },
+    {
+      "question": "Who is the author of 'One Hundred Years of Solitude'?",
+      "options": [
+        "Gabriel García Márquez",
+        "Isabel Allende",
+        "Julio Cortázar",
+        "Mario Vargas Llosa"
+      ],
+      "correctOption": 0,
+      "points": 10
+    },
+    {
+      "question": "What is the speed of light?",
+      "options": [
+        "300,000 km/s",
+        "150,000 km/s",
+        "500,000 km/s",
+        "200,000 km/s"
+      ],
+      "correctOption": 0,
+      "points": 20
+    },
+    {
+      "question": "Which scientist is known for the theory of general relativity?",
+      "options": [
+        "Isaac Newton",
+        "Albert Einstein",
+        "Galileo Galilei",
+        "Niels Bohr"
+      ],
+      "correctOption": 1,
+      "points": 20
+    },
+    {
+      "question": "Who is credited with the discovery of penicillin?",
+      "options": [
+        "Marie Curie",
+        "Alexander Fleming",
+        "Louis Pasteur",
+        "Joseph Lister"
+      ],
+      "correctOption": 1,
+      "points": 20
+    },
+    {
+      "question": "What is the chemical formula for methane?",
+      "options": ["CH3OH", "C2H5OH", "CH4", "CO2"],
+      "correctOption": 2,
+      "points": 20
+    },
+    {
+      "question": "Which planet is known as the 'Blue Planet'?",
+      "options": ["Mars", "Earth", "Neptune", "Uranus"],
+      "correctOption": 1,
+      "points": 20
+    },
+    {
+      "question": "Who wrote 'War and Peace'?",
+      "options": [
+        "Fyodor Dostoevsky",
+        "Leo Tolstoy",
+        "Anton Chekhov",
+        "Ivan Turgenev"
+      ],
+      "correctOption": 1,
+      "points": 30
+    },
+    {
+      "question": "What is the largest mammal in the world?",
+      "options": ["Elephant", "Blue Whale", "Giraffe", "Hippopotamus"],
+      "correctOption": 1,
+      "points": 30
+    },
+    {
+      "question": "In what year was the United Nations founded?",
+      "options": ["1945", "1950", "1960", "1970"],
+      "correctOption": 0,
+      "points": 30
+    },
+    {
+      "question": "Who discovered the first antibiotic?",
+      "options": [
+        "Alexander Fleming",
+        "Marie Curie",
+        "Joseph Lister",
+        "Louis Pasteur"
       ],
       "correctOption": 0,
       "points": 30
     },
     {
-      "question": "When will an effect run if it doesn't have a dependency array?",
+      "question": "What is the capital of China?",
+      "options": ["Beijing", "Shanghai", "Hong Kong", "Guangzhou"],
+      "correctOption": 0,
+      "points": 30
+    },
+    {
+      "question": "Which gas is responsible for the color of the Earth's sky?",
+      "options": ["Oxygen", "Nitrogen", "Carbon Dioxide", "Helium"],
+      "correctOption": 1,
+      "points": 30
+    },
+    {
+      "question": "Who is the 'Father of Modern Physics'?",
       "options": [
-        "Only when the component mounts",
-        "Only when the component unmounts",
-        "The first time the component re-renders",
-        "Each time the component is re-rendered"
+        "Isaac Newton",
+        "Niels Bohr",
+        "Galileo Galilei",
+        "Albert Einstein"
       ],
       "correctOption": 3,
+      "points": 30
+    },
+    {
+      "question": "What is the chemical formula for table salt?",
+      "options": ["H2O", "NaCl", "CO2", "CH4"],
+      "correctOption": 1,
       "points": 20
+    },
+    {
+      "question": "Who is the author of 'The Catcher in the Rye'?",
+      "options": [
+        "F. Scott Fitzgerald",
+        "J.D. Salinger",
+        "Ernest Hemingway",
+        "Harper Lee"
+      ],
+      "correctOption": 1,
+      "points": 20
+    },
+    {
+      "question": "What is the largest moon in our solar system?",
+      "options": ["Titan", "Ganymede", "Europa", "Callisto"],
+      "correctOption": 1,
+      "points": 20
+    },
+    {
+      "question": "Who invented the telephone?",
+      "options": [
+        "Alexander Graham Bell",
+        "Thomas Edison",
+        "Nikola Tesla",
+        "Guglielmo Marconi"
+      ],
+      "correctOption": 0,
+      "points": 20
+    },
+    {
+      "question": "What is the capital of South Africa?",
+      "options": ["Johannesburg", "Cape Town", "Durban", "Pretoria"],
+      "correctOption": 3,
+      "points": 30
     }
   ]
 }
