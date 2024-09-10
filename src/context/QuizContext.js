@@ -1,7 +1,7 @@
 import { createContext, useContext, useEffect, useReducer } from "react";
 
 const QuizContext = createContext();
-const SECS_PER_QUESTION = 10;
+// const SECS_PER_QUESTION = 10;
 const initialState = {
   questions: [],
   diffQuestions: [],
