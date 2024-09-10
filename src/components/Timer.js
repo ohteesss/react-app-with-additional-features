@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useEffect } from "react";
 import { useQuiz } from "../context/QuizContext";
 function Timer() {
   const { dispatch, secondsRemaining } = useQuiz();
