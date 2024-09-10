@@ -19,6 +19,10 @@
       "dest": "/api/questions.json"
     },
     {
+      "src": "/static/(.*)",
+      "dest": "/static/$1"
+    },
+    {
       "src": "/(.*)",
       "dest": "/index.html"
     }
