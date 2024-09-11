@@ -12,8 +12,8 @@ import Footer from "./Footer.js";
 import Timer from "./Timer.js";
 import AdditionalStartScreen from "./AdditionalStartScreenFeatures.js";
 import { useQuiz } from "../context/QuizContext.js";
-import main from "../services/openai.js";
-import "../services/llama.js";
+// import main from "../services/openai.js";
+// import "../services/llama.js";
 
 export default function App() {
   const { status, answer } = useQuiz();
@@ -45,5 +45,3 @@ export default function App() {
     </div>
   );
 }
-
-main();
